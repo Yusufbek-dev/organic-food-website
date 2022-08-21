@@ -1,0 +1,99 @@
+@use "../globals/mixin" as *;
+@use "../globals/colors" as *;
+
+.advance {
+  padding: 140px 0;
+  &__title {
+    font-size: 4.2rem;
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    font-size: 1rem;
+    color: #555555;
+    width: 55%;
+  }
+  &__list {
+    @include adjust;
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      &>div {
+        background-color: transparent;
+        padding: 40px 59px;
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        .a-img {
+          padding: 20px;
+          border-radius: 50%;
+          background-color:#F3FBF8;
+        }
+        &:nth-child(2) {
+          background-color: #F3FBF8;
+          .b-img {
+            padding: 20px 25px;
+            background-color: #fff;
+          }
+        }
+        div {
+          h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+          }
+          p {
+            font-size: .8rem;
+            color: #555555;
+          }
+
+        }
+      }
+    }
+  }
+  @include tablet {
+    &__title {
+      font-size: 3rem;
+      text-align:center;
+    }
+    &__subtitle {
+      width: 80%;
+      font-size: .9rem;
+      text-align:center;
+      margin: 0 auto;
+    }
+    &__list {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  @include mobile {
+    padding: 50px 0;
+    &__title {
+      font-size: 1.7rem;
+      text-align:center;
+    }
+    &__subtitle {
+      width: 90%;
+      font-size: .8rem;
+    }
+    &__list {
+      flex-direction: column;
+      row-gap: 20px;
+      &-img {
+        display: none;
+      }
+      &-texts {
+        &>div {
+          padding: 20px 29px;
+          flex-direction: column;
+          row-gap:20px;
+          h4 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}

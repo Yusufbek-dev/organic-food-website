@@ -1,0 +1,107 @@
+@use "../globals/mixin" as *;
+.customer {
+  padding: 90px 0;
+  .customer-box {
+    @include adjust;
+  }
+  &__title {
+    font-size: 4.2rem;
+    margin-bottom:30px;
+  }
+  &__subtitle {
+    margin-bottom:40px;
+    font-size: 1rem;
+    color: #555555;
+    line-height: 25px;
+  }
+  &__texts {
+    width: 45%;
+    &-name{
+      font-family:'DM Sans';
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    &-bottom {
+      margin-top: 20px;
+      @include adjust;
+      .stars {
+        font-size: 1rem;
+        color:  #F1B90B;
+      }
+      .buttons {
+        display: flex;
+        column-gap: 24px;
+        button {
+          padding: 19px 22px;
+          border: 1px solid #CCCCCC;
+          background-color: transparent;
+          border-radius: 50%;
+          text-align: center;
+          &:nth-child(2) {
+            color: #fff;
+            background-color: #09A66D;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    .customer-box {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__subtitle {
+      font-size: .9rem;
+    }
+    &__texts {
+      width: 60%;
+      &-name {
+        font-size: 1.4rem;
+      }
+      &-bottom {
+        .stars {
+          font-size: .9rem;
+        }
+        .buttons {
+          button {
+            padding: 17px 20px;
+          }
+        }
+      }
+    }
+  }
+  @include mobile {
+    padding: 40px 0;
+    
+    &__title {
+      font-size: 1.7rem;
+    }
+    &__subtitle {
+      font-size: .8rem;
+    }
+    &__texts {
+      margin: 0 auto;
+      width: 90%;
+      &-name {
+        font-size: 1rem;
+      }
+      &-bottom {
+        .stars {
+          font-size: .8rem;
+        }
+        .buttons {
+          button {
+            padding: 14px 17px;
+          }
+        }
+      }
+    }
+    &__img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use "../globals/mixin" as *;
+.apps {
+  padding: 40px 0 140px;
+  .app-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__img {
+    img {
+      display: block;
+    }
+  }
+  &__title {
+    font-size: 4.2rem;
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    font-size: 1rem;
+    margin-bottom: 50px;
+    color: #555555;
+  }
+  &__texts {
+    width:65%;
+    &-sup-title {
+      border-radius: 14px;
+      width: 170px;
+      font-size: 1rem;
+      text-transform: capitalize;
+      padding: 11px 24px;
+      background-color: #F3FBF8;
+    }
+    &-stores {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+      a {
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .app-box {
+      flex-direction: column-reverse;
+      row-gap: 40px;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__subtitle {
+      font-size: .9rem;
+    }
+    &__texts {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  @include mobile {
+    padding: 30px 0 50px;
+    
+    &__title {
+      font-size: 1.7rem;
+      text-align: center;
+    }
+    &__subtitle {
+      font-size: .8rem;
+      text-align: center;
+    }
+    &__texts {
+      width: 90%;
+      margin: 0 auto;
+      &-sup-title {
+        margin: 0 auto;
+      }
+      &-stors {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+    &__img {
+      display: none;
+    }
+  }
+}

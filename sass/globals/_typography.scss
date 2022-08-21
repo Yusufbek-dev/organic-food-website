@@ -1,0 +1,72 @@
+@use "colors" as *;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@700&display=swap');
+h1,
+h2,
+h3,
+h4{
+  margin-top: 0;
+  font-weight: 700;
+  color: $text-color;
+  line-height: 1.1;
+  letter-spacing: .6px;
+  font-family: 'Rosario', sans-serif;
+}
+/*
+ * Sizes
+ */
+ h1{
+   font-size:3rem;  
+ }
+ h2{
+   font-size: 2rem;
+ }
+ h3{
+   font-size: 1.7rem;
+ }
+ h4{
+   font-size: 1.4rem;
+ }
+ h5{
+   font-size: 16px;
+   line-height: 1.1;
+ }
+ h6{
+   font-size: 0.875rem;
+   line-height: 1.1;
+ }
+ /* Tablet landscape and bigger */
+ @media (max-width: 1024px) {
+   h1 {
+     font-size: 2.5rem;
+   }
+   h2 {
+     font-size: 1.7rem;
+   }
+   h3 {
+     font-size: 1.3rem;
+   }
+   h4 {
+     font-size: 1rem;
+   }
+ }
+ @media (max-width: 500px) {
+   h1 {
+     font-size: 1.9rem;
+   }
+   h2 {
+     font-size: 1.3rem;
+   }
+   h3 {
+     font-size: 1rem;
+   }
+   h4 {
+     font-size: .9rem;
+   }
+ }
+p {
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 0;
+  font-weight: 400;
+  color:$text-color;
+}

@@ -1,0 +1,125 @@
+@use "../globals/mixin" as *;
+@use "../globals/colors" as *;
+
+
+.hero {
+  padding: 92px 0 50px;
+  background-color:#F3FBF8;
+  position: relative;
+  z-index:1;
+  &__leaves {
+    position:absolute;
+    top: -40px;
+    left: 0;
+  }
+  .hero-box {
+    position: relative;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+  }
+  &__title {
+    text-align: center;
+    font-size:4.2rem;
+    margin-bottom: 24px;
+    @include mobile {
+      font-size: 2rem;
+    }
+    @include min-mobile {
+      font-size: 1.7;
+    }
+  }
+  &__subtitle {
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    @include mobile {
+      width: 90%;
+    }
+  }
+  &__btn {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size:1rem;
+    color: #222;
+    text-align: center;
+
+    span {
+      margin-left: 20px;
+      padding:26px 30px;
+      background-color: #09A66D;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: .8rem;
+      span {
+        padding: 15px 20px;
+      }
+    }
+  }
+  .hero-bottom {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    &__img {
+      display: block;
+    }
+    &__status {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      &-item {
+        display: flex;
+        align-items: center;
+        column-gap: 22px;
+        padding: 17px 46px 17px 30px;
+        background-color: #fff;
+        &>div {
+          h4 {
+            font-family: 'DM Sans';
+            font-size: 3rem;
+            margin-bottom: 8px;
+          }
+          p {
+            font-size: 1rem;
+          }
+         
+        }
+        @include mobile {
+          padding:12px 36px 12px 20px;
+          &>div {
+            h4 {
+              font-size: 1.8rem;
+            }
+            p {
+              font-size: .7rem;
+            }
+          }
+        }
+      }
+    }
+    @include tablet {
+      flex-direction: column;
+      &__status {
+        &-item {
+          padding: 18px 50px;
+          &>div {
+            h4 {
+              font-size: 2.5rem;
+            }
+            p {
+              font-size: .9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
